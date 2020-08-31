@@ -1,0 +1,9 @@
+  name: demo
+  description: This is a demo
+  deploymentUri: gs://ml-eng-model/model.pkl
+  runtimeVersion: '1.0'
+  manualScaling:
+    nodes: 10  # The number of nodes to allocate for this model.
+  autoScaling:
+    minNodes: 0  # The minimum number of nodes to allocate for this model.
+ 
