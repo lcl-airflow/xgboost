@@ -11,8 +11,8 @@ pipeline {
 
 
     //Docker Parameters
-    REGISTRY = 'https://nexus-repo.loblaw.ca:8082'
-    DOCKER_AGENT= 'nexus-repo.loblaw.ca:8082/dataeng-mlengine:0.2'
+    REGISTRY = 'https://nexus-repo.[l0bl*w.ca].ca:8082'
+    DOCKER_AGENT= 'nexus-repo.[l0bl*w.ca]:8082/dataeng-mlengine:0.2'
     DOCKER_IMG='dataeng-mlengine'
     DOCKER_VER='0.2'
     
@@ -52,7 +52,7 @@ pipeline {
         stage('Train Model') {
             agent {
                 docker { 
-                    image 'nexus-repo.loblaw.ca:8082/dataeng-mlengine:0.2'
+                    image 'nexus-repo.[l0bl*w.ca].ca:8082/dataeng-mlengine:0.2'
                     reuseNode true
                 }
             }
