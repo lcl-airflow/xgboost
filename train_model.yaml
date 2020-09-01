@@ -1,9 +1,11 @@
-  name: demo
-  description: This is a demo
-  deploymentUri: gs://ml-eng-model/model.pkl
-  runtimeVersion: '1.0'
-  manualScaling:
-    nodes: 10  # The number of nodes to allocate for this model.
-  autoScaling:
-    minNodes: 0  # The minimum number of nodes to allocate for this model.
- 
+labels:
+    type: xgboost-demo
+    owner: dia-engop
+    maintainer: herman
+trainingInput:
+    scaleTier: standard-1
+    runtime_version: "2.1"
+    pythonVersion: "3.7"
+    scheduling:
+      maxWaitTime: 3600s
+      maxRunningTime: 7200s
