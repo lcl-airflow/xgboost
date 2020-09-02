@@ -9,10 +9,11 @@ import sys
 import pandas as pd
 import xgboost as xgb
 
-# Fill in your Cloud Storage bucket name
-BUCKET_NAME = '<YOUR_BUCKET_NAME>'
-# [END setup]
 
+# Fill in your Cloud Storage bucket name
+BUCKET_NAME = 'ml-eng-model-staging'
+# [END setup]
+subprocess.check_call(['pip3','freeze'])
 # [START download-data]
 iris_data_filename = 'iris_data.csv'
 iris_target_filename = 'iris_target.csv'
@@ -40,6 +41,7 @@ iris_target = iris_target.reshape((iris_target.size,))
 
 # [START train-and-save-model]
 # Load data into DMatrix object
+print(xgb.DMatrix)
 dtrain = xgb.DMatrix(iris_data, label=iris_target)
 
 # Train XGBoost model

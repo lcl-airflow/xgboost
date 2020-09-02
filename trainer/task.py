@@ -1,8 +1,9 @@
-import train_model
+import model
 import subprocess
 import os
 import sys
 import argparse
+
 
 
 def getOptions(args=sys.argv[1:]):
@@ -17,7 +18,7 @@ def getOptions(args=sys.argv[1:]):
 
 if __name__ == "__main__":
     options = getOptions(sys.argv[1:])
-    tm = train_model.train_model(options.input,options.data, options.target, options.staging , options.stagedir )
+    tm = model.model(options.input,options.data, options.target, options.staging , options.stagedir )
     tm.fetch()
     tm.load()
     tm.train()

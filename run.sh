@@ -1,12 +1,11 @@
 #!/bin/bash
-PACKAGE_PATH='/home/herman_cheung/xgboost/xgboost'
-MAIN_TRAINER_MODULE='xgboost.main'
+MAIN_TRAINER_MODULE='xgboost.train'
 STAGING_BUCKET='gs://ml-eng-model-staging'
 NOW=$(date +%s)
 JOB_NAME='xgboosttraining'$NOW
 JOB_DIR='gs://ml-eng-model-staging/package'
 REGION='us-central1'
-TRAINER_PACKAGE_PATH='/home/herman_cheung/xgboost/xgboost'
+TRAINER_PACKAGE_PATH='/home/herman_cheung/xgboost/xgboost/'
 ARG1='gs://cloud-samples-data/ai-platform/iris/'
 ARG2='iris_data.csv'
 ARG3='iris_target.csv'
