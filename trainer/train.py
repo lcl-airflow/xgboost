@@ -8,12 +8,11 @@ import subprocess
 import sys
 import pandas as pd
 import xgboost as xgb
-
+from xgboost import XGBClassifier
 
 # Fill in your Cloud Storage bucket name
 BUCKET_NAME = 'ml-eng-model-staging'
 # [END setup]
-subprocess.check_call(['pip3','freeze'])
 # [START download-data]
 iris_data_filename = 'iris_data.csv'
 iris_target_filename = 'iris_target.csv'
