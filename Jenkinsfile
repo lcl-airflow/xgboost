@@ -11,8 +11,8 @@ pipeline {
 
 
     //Docker Parameters
-    REGISTRY = 'https://nexus-repo.[l0bl*w.ca].ca:8082'
-    DOCKER_AGENT= 'nexus-repo.[l0bl*w.ca]:8082/dataeng-mlengine:0.2'
+    REGISTRY = 'https://nexus-repo..ca:8082'
+    DOCKER_AGENT= 'nexus-repo.:8082/dataeng-mlengine:0.2'
     DOCKER_IMG='dataeng-mlengine'
     DOCKER_VER='0.2'
     
